@@ -12,21 +12,40 @@ class ScreenTwo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Screen Two"),
-        backgroundColor: const Color.fromARGB(255, 225, 158, 154),
+        backgroundColor: Colors.pinkAccent,
         centerTitle: true,
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text("You selected number", style: TextStyle(fontSize: 20)),
-            Text('${myModel.counter}', style: const TextStyle(fontSize: 40)),
+            const Text(
+              "Selected Number:",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 11),
+            Text(
+              '${myModel.counter}',
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 50, color: Colors.blueAccent),
+            ),
+            const SizedBox(height: 22),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.teal,
+                padding: const EdgeInsets.symmetric(vertical: 12),
+              ),
+              onPressed: myModel.increaseValue,
+              child: const Text(
+                "Increment Counter",
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: myModel.increaseValue,
-        child: const Icon(Icons.add),
       ),
     );
   }
