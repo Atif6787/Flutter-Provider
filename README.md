@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # provider_in_flutter
 
 A new Flutter project.
@@ -18,3 +19,6 @@ samples, guidance on mobile development, and a full API reference.
 =======
 # Provider-in-Flutter
 >>>>>>> 01a114b9e284e9fd178afee2dad4804a3ee2f6bb
+=======
+# Flutter-Provider
+>>>>>>> 66f3d866159a9e4c7a1b7880b552aff71e86897e
